@@ -21,11 +21,13 @@ function submitForm(e){
 
   // Get values
   var name = getInputVal('name');
-  var pass = getInputVal('pass');
+  var company = getInputVal('company');
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
   var message = getInputVal('message');
 
   // Save message
-  saveMessage(name, pass, message);
+  saveMessage(name, company, email, phone, message);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
