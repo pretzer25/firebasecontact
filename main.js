@@ -1,11 +1,11 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
-  apiKey: "xxxxx",
-  authDomain: "xxxxx",
-  databaseURL: "xxxxx",
-  projectId: "xxxxx",
-  storageBucket: "xxxxx",
-  messagingSenderId: "xxxxx"
+  apiKey: "AIzaSyAQYdEIrsksIn6Rye1TZ9ZoyrLHU6jfHg4",
+  authDomain: "max-learn-b0415.firebaseapp.com",
+  databaseURL: "https://max-learn-b0415-default-rtdb.firebaseio.com",
+  projectId: "max-learn-b0415",
+  storageBucket: "max-learn-b0415.appspot.com",
+  messagingSenderId: "530326840871"
 };
 firebase.initializeApp(config);
 
@@ -21,13 +21,11 @@ function submitForm(e){
 
   // Get values
   var name = getInputVal('name');
-  var company = getInputVal('company');
-  var email = getInputVal('email');
-  var phone = getInputVal('phone');
+  var pass = getInputVal('pass');
   var message = getInputVal('message');
 
   // Save message
-  saveMessage(name, company, email, phone, message);
+  saveMessage(name, pass, message);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -51,9 +49,7 @@ function saveMessage(name, company, email, phone, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
-    company:company,
-    email:email,
-    phone:phone,
+    pass:pass,
     message:message
   });
 }
