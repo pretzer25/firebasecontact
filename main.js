@@ -49,7 +49,9 @@ function saveMessage(name, company, email, phone, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
-    pass:pass,
+    company:company,
+    email:email,
+    phone:phone,
     message:message
   });
 }
